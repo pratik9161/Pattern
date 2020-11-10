@@ -1,0 +1,40 @@
+Problem 2
+For case 1, 2, 3, 6, 8 :
+
+#!/bin/bash -x
+
+echo "Enter  word "
+read word
+
+pat="^[a-z]{3}[0-9\+\.\_\-]*\@[0-9a-z]*\.(com|net)$"
+
+
+if [[$word =- $pat ]];
+then
+        echo valid;
+else
+        echo Invalid;
+fi
+
+
+
+ 
+
+
+For Q4, 5 & 7 :
+
+#!/bin/bash -x
+
+echo "Enter  word "
+read word
+
+pat="^[a-z]{3}[0-9\+\.\_\-]*\@[0-9a-z]*\.(com|net)\.(com|au)$"
+
+
+if [[$word =- $pat ]];
+then
+        echo valid;
+else
+        echo Invalid;
+fi
+
