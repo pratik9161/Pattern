@@ -1,0 +1,31 @@
+#Pattern Exercise : Problem 1
+
+#!/bin/bash -x
+
+echo "Enter  word "
+read name
+
+echo "Enter Last Name"
+read LastName
+
+echo "Enter Email"
+read Email
+
+echo "Enter Mobile Number"
+read Mobile
+
+echo "Enter Password"
+read Password
+
+Pattern1="^[A-z]{1}[a-zA-Z]*$"
+Pattern2="^[A-z]{1}[a-zA-Z]*$"
+Pattern3="^[a-z]{3}\.[a-z]*\@(bl)?\.(co)?[\.a-z]*$"
+Pattern4= "^(\+91)?[6-9]{1}[0-9]{9}$"
+Pattern5 = "^((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{,20})$"
+
+if [[$name =~ $Pattern1 -a $LastName =~ $Pattern2 -a $Email =~ $Pattern3 -a $Mobile =~ $Pattern4 -a $Password =~ $Pattern5 ]];
+then
+        echo valid;
+else
+        echo Invalid;
+fi
